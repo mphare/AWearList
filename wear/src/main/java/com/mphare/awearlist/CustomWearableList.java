@@ -33,6 +33,20 @@ public class CustomWearableList extends Activity
     mIcons.add(R.drawable.ic_action_star);
     mIcons.add(R.drawable.ic_action_user);
     mIcons.add(R.drawable.ic_action_video);
+    mIcons.add(R.drawable.ic_action_cut);
+    mIcons.add(R.drawable.ic_action_copy);
+    mIcons.add(R.drawable.ic_action_delete);
+    mIcons.add(R.drawable.ic_action_done);
+    mIcons.add(R.drawable.ic_action_edit);
+    mIcons.add(R.drawable.ic_action_mail_add);
+    mIcons.add(R.drawable.ic_action_overflow);
+    mIcons.add(R.drawable.ic_action_paste);
+    mIcons.add(R.drawable.ic_action_refresh);
+    mIcons.add(R.drawable.ic_action_send);
+    mIcons.add(R.drawable.ic_action_share);
+    mIcons.add(R.drawable.ic_action_user_add);
+    mIcons.add(R.drawable.ic_action_select_all);
+    mIcons.add(R.drawable.ic_action_search);
 
     // This is our list header
     mHeader = (TextView) findViewById(R.id.header);
