@@ -2,7 +2,6 @@ package com.mphare.awearlist;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.wearable.view.WatchViewStub;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -19,17 +18,19 @@ public class MainActivity extends Activity
     setContentView(R.layout.activity_main);
 
     mIcons = new ArrayList<Integer>();
-    mIcons.add(R.drawable.ic_ac);
+    mIcons.add(R.drawable.ic_action_attach);
+    mIcons.add(R.drawable.ic_action_call);
+    mIcons.add(R.drawable.ic_action_locate);
+    mIcons.add(R.drawable.ic_action_mail);
+    mIcons.add(R.drawable.ic_action_microphone);
+    mIcons.add(R.drawable.ic_action_photo);
+    mIcons.add(R.drawable.ic_action_star);
+    mIcons.add(R.drawable.ic_action_user);
+    mIcons.add(R.drawable.ic_action_video);
+    mIcons.add(R.drawable.ic_action_copy);
+    mIcons.add(R.drawable.ic_action_cut);
 
-    final WatchViewStub stub = (WatchViewStub) findViewById(R.id.watch_view_stub);
-    stub.setOnLayoutInflatedListener(new WatchViewStub.OnLayoutInflatedListener()
-    {
-      @Override
-      public void onLayoutInflated(WatchViewStub stub)
-      {
-        mTextView = (TextView) stub.findViewById(R.id.text);
-      }
-    });
+    mHeader = (TextView) findViewById(R.id.header);
   }
 }
 
