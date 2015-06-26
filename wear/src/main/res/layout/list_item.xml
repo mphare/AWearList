@@ -15,7 +15,7 @@
             android:layout_width="52dip"
             android:layout_height="52dip"
             android:layout_gravity="center_vertical"
-            android:layout_marginEnd="32dp"
+            android:layout_marginEnd="12dp"
             android:layout_marginStart="16dp"
             app:circle_border_color="#FFFFFFFF"
             app:circle_border_width="2dp"
@@ -30,6 +30,7 @@
             android:alpha="0.5"
             android:fontFamily="sans-serif-condensed-light"
             android:gravity="center_vertical"
+            android:text="Name"
             android:textColor="@color/white"
             android:textSize="16sp"/>
 
@@ -44,6 +45,19 @@
             android:gravity="center_vertical"
             android:textColor="@color/white"
             android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="fill_parent"
+            android:layout_height="26dip"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="13dp"
+            android:layout_toEndOf="@+id/name"
+            android:alpha="0.5"
+            android:gravity="center_vertical|right"
+            android:text="New Text"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
     </RelativeLayout>
 </com.mphare.awearlist.WearableListItemLayout>
 

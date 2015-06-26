@@ -42,6 +42,8 @@ public class WearableAdapter extends WearableListView.Adapter
     textView.setText(mItems.get(position).getLabel());
     TextView textDescView = itemViewHolder.mItemDescTextView;
     textDescView.setText(mItems.get(position).getDescription());
+    TextView textNumView = itemViewHolder.mItemNumTextView;
+    textNumView.setText(String.valueOf(position));
   }
 
   @Override
@@ -55,6 +57,7 @@ public class WearableAdapter extends WearableListView.Adapter
     private CircledImageView mCircledImageView;
     private TextView         mItemTextView;
     private TextView         mItemDescTextView;
+    private TextView         mItemNumTextView;
 
     public ItemViewHolder(View itemView)
     {
@@ -63,6 +66,7 @@ public class WearableAdapter extends WearableListView.Adapter
           itemView.findViewById(R.id.circle);
       mItemTextView = (TextView) itemView.findViewById(R.id.name);
       mItemDescTextView = (TextView) itemView.findViewById(R.id.description);
+      mItemNumTextView = (TextView) itemView.findViewById(R.id.number);
     }
   }
 }
