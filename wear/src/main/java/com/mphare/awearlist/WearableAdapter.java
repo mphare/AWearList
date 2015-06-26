@@ -43,7 +43,7 @@ public class WearableAdapter extends WearableListView.Adapter
     TextView textDescView = itemViewHolder.mItemDescTextView;
     textDescView.setText(mItems.get(position).getDescription());
     TextView textNumView = itemViewHolder.mItemNumTextView;
-    textNumView.setText(String.valueOf(position));
+    textNumView.setText(String.valueOf(position+1));
   }
 
   @Override
