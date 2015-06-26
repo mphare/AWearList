@@ -15,6 +15,7 @@ public class CustomWearableList extends Activity
 {
   private static ArrayList<Integer>    mIcons;
   private static ArrayList<String>     mLabels;
+  private static ArrayList<String>     mDescriptions;
   private static ArrayList<CustomBean> customBeans;
 
   private TextView mHeader;
@@ -50,6 +51,31 @@ public class CustomWearableList extends Activity
     mLabels.add("Select All");
     mLabels.add("Search");
 
+    mDescriptions = new ArrayList<String>();
+    mDescriptions.add("Attach something");
+    mDescriptions.add("Call someone");
+    mDescriptions.add("Locate somethingg");
+    mDescriptions.add("Read mail");
+    mDescriptions.add("Talk to something");
+    mDescriptions.add("Take a picture");
+    mDescriptions.add("Important stuff");
+    mDescriptions.add("Identify someone");
+    mDescriptions.add("Make a video");
+    mDescriptions.add("Cut ot the clipboard");
+    mDescriptions.add("Copy to the clipboard");
+    mDescriptions.add("Delete something");
+    mDescriptions.add("Finished!");
+    mDescriptions.add("Change something");
+    mDescriptions.add("Create new mail");
+    mDescriptions.add("Too much!");
+    mDescriptions.add("paste from the clipboard");
+    mDescriptions.add("Refresh");
+    mDescriptions.add("Send something");
+    mDescriptions.add("Share with someone");
+    mDescriptions.add("Create a new user");
+    mDescriptions.add("Select everything");
+    mDescriptions.add("Search for something");
+
     // Sample icons for the list
     mIcons = new ArrayList<Integer>();
     mIcons.add(R.drawable.ic_action_attach);
@@ -79,7 +105,7 @@ public class CustomWearableList extends Activity
     customBeans = new ArrayList<CustomBean>();
     for (int i = 0; i < mIcons.size(); ++i)
     {
-      customBeans.add(new CustomBean(mIcons.get(i), mLabels.get(i)));
+      customBeans.add(new CustomBean(mIcons.get(i), mLabels.get(i), mDescriptions.get(i)));
     }
 
     // This is our list header

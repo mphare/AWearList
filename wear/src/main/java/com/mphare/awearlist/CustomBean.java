@@ -7,11 +7,13 @@ public class CustomBean
 {
   Integer icon;
   String  label;
+  String  description;
 
-  public CustomBean(Integer icon, String label)
+  public CustomBean(Integer icon, String label, String description)
   {
     this.icon = icon;
     this.label = label;
+    this.description = description;
   }
 
   public String getLabel()
@@ -32,6 +34,16 @@ public class CustomBean
   public void setIcon(Integer icon)
   {
     this.icon = icon;
+  }
+
+  public String getDescription()
+  {
+    return description;
+  }
+
+  public void setDescription(String description)
+  {
+    this.description = description;
   }
 
 }
