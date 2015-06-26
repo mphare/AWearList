@@ -13,14 +13,42 @@ import java.util.ArrayList;
  */
 public class CustomWearableList extends Activity
 {
-  private static ArrayList<Integer> mIcons;
-  private        TextView           mHeader;
+  private static ArrayList<Integer>    mIcons;
+  private static ArrayList<String>     mLabels;
+  private static ArrayList<CustomBean> customBeans;
+
+  private TextView mHeader;
 
   @Override
   protected void onCreate(Bundle savedInstanceState)
   {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+
+    mLabels = new ArrayList<String>();
+    mLabels.add("Attach");
+    mLabels.add("Call");
+    mLabels.add("Locate");
+    mLabels.add("Mail");
+    mLabels.add("Mic");
+    mLabels.add("Photo");
+    mLabels.add("Star");
+    mLabels.add("User");
+    mLabels.add("Video");
+    mLabels.add("Cut");
+    mLabels.add("Copy");
+    mLabels.add("Delete");
+    mLabels.add("Done");
+    mLabels.add("Edit");
+    mLabels.add("Mail Add");
+    mLabels.add("Overflow");
+    mLabels.add("Paste");
+    mLabels.add("Refresh");
+    mLabels.add("Send");
+    mLabels.add("Share");
+    mLabels.add("User Add");
+    mLabels.add("Select All");
+    mLabels.add("Search");
 
     // Sample icons for the list
     mIcons = new ArrayList<Integer>();
@@ -48,12 +76,18 @@ public class CustomWearableList extends Activity
     mIcons.add(R.drawable.ic_action_select_all);
     mIcons.add(R.drawable.ic_action_search);
 
+    customBeans = new ArrayList<CustomBean>();
+    for (int i = 0; i < mIcons.size(); ++i)
+    {
+      customBeans.add(new CustomBean(mIcons.get(i), mLabels.get(i)));
+    }
+
     // This is our list header
     mHeader = (TextView) findViewById(R.id.header);
 
     WearableListView wearableListView =
         (WearableListView) findViewById(R.id.wearable_list);
-    wearableListView.setAdapter(new WearableAdapter(this, mIcons));
+    wearableListView.setAdapter(new WearableAdapter(this, customBeans));
     wearableListView.setClickListener(mClickListener);
     wearableListView.addOnScrollListener(mOnScrollListener);
   }
