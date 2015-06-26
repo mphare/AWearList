@@ -15,10 +15,10 @@ import java.util.ArrayList;
  */
 public class WearableAdapter extends WearableListView.Adapter
 {
-  private       ArrayList<Integer> mItems;
-  private final LayoutInflater     mInflater;
+  private       ArrayList<CustomBean> mItems;
+  private final LayoutInflater        mInflater;
 
-  public WearableAdapter(Context context, ArrayList<Integer> items)
+  public WearableAdapter(Context context, ArrayList<CustomBean> items)
   {
     mInflater = LayoutInflater.from(context);
     mItems = items;
@@ -37,9 +37,9 @@ public class WearableAdapter extends WearableListView.Adapter
   {
     ItemViewHolder itemViewHolder = (ItemViewHolder) viewHolder;
     CircledImageView circledView = itemViewHolder.mCircledImageView;
-    circledView.setImageResource(mItems.get(position));
+    circledView.setImageResource(mItems.get(position).getIcon());
     TextView textView = itemViewHolder.mItemTextView;
-    textView.setText(String.format("Item %d", position + 1));
+    textView.setText(mItems.get(position).getLabel());
   }
 
   @Override
